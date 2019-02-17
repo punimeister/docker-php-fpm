@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  nginx:
+    build: '../nginx'
+    restart: 'on-failure'
+    ports:
+      - '80:80'
+    volumes:
+      - './web:/var/www/html'
+
+  php-fpm:
+    build: '../7.3'
+    restart: 'on-failure'
+    environment:
+      REMOTE_DEBUG: '0'
+    volumes:
+      - './web:/var/www/html'
