@@ -52,7 +52,7 @@ WORKDIR /var/www/html
 # 2. Starting PHP-FPM
 CMD sh -c " \
       if [ "${REMOTE_DEBUG}" = "1" ]; then \
-        sed -i s/\;xdebug\.remote/xdebug\.remote/ /usr/local/etc/php/conf.d/xdebug.ini; \
+        sed -i 's/\;xdebug\.remote/xdebug\.remote/' /usr/local/etc/php/conf.d/xdebug.ini; \
       fi \
       && php-fpm \
     "
