@@ -40,7 +40,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 ENV PATH=$PATH:/root/composer/vendor/bin COMPOSER_ALLOW_SUPERUSER=1
 
 # Install Xdebug.
-RUN pecl install xdebug-2.7.1
+RUN pecl install xdebug-2.7.2
 
 # Copy ini files.
 COPY php.ini /usr/local/etc/php/
