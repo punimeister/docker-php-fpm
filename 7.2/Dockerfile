@@ -46,7 +46,9 @@ COPY php.ini /usr/local/etc/php/
 COPY xdebug.ini /usr/local/etc/php/conf.d/
 
 # Initial settings.
-ENV REMOTE_DEBUG='0' PHP_IDE_CONFIG='serverName=localhost'
+ENV PHP_IDE_CONFIG 'serverName=localhost'
+ENV REMOTE_DEBUG 0
+
 WORKDIR /var/www/html
 
 # 1. Rewrite xdebug.ini if needed.
