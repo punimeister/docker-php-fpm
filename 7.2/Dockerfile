@@ -45,14 +45,14 @@ RUN pecl install xdebug-2.7.2
 COPY php.ini /usr/local/etc/php/
 COPY xdebug.ini /usr/local/etc/php/conf.d/
 
-# Initial settings.
+# Declare default environment variables.
 ENV PHP_IDE_CONFIG 'serverName=localhost'
 ENV REMOTE_DEBUG 0
 
 WORKDIR /var/www/html
 
-# 1. Rewrite xdebug.ini if needed.
-# 2. Starting PHP-FPM
+# 1. Rewrite xdebug.ini if necesarry.
+# 2. Start PHP-FPM.
 CMD sh -c " \
       if [ "${REMOTE_DEBUG}" = "1" ]; then \
         sed -i 's/\;xdebug\.remote/xdebug\.remote/' /usr/local/etc/php/conf.d/xdebug.ini; \
