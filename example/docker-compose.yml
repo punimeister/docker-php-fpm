@@ -1,8 +1,9 @@
 version: '3'
 
 services:
+
   nginx:
-    build: '../nginx'
+    build: './nginx'
     restart: 'on-failure'
     ports:
       - '80:80'
