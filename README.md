@@ -5,7 +5,6 @@
 - [`7.3`, `latest` (7.3/Dockerfile)](https://github.com/punimeister/docker-php-fpm/blob/master/7.3/Dockerfile)
 - [`7.2` (7.2/Dockerfile)](https://github.com/punimeister/docker-php-fpm/blob/master/7.2/Dockerfile)
 - [`7.1` (7.1/Dockerfile)](https://github.com/punimeister/docker-php-fpm/blob/master/7.1/Dockerfile)
-- [`5.6` (5.6/Dockerfile)](https://github.com/punimeister/docker-php-fpm/blob/master/5.6/Dockerfile)
 
 ## Environment Variables
 
