@@ -15,7 +15,7 @@ services:
       - 'php-fpm'
 
   php-fpm:
-    build: '../7.3'
+    build: 'punimeister/php-fpm:latest'
     restart: 'on-failure'
     environment:
       REMOTE_DEBUG: '0'
