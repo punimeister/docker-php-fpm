@@ -7,8 +7,12 @@ services:
     restart: 'on-failure'
     ports:
       - '80:80'
+      - '443:443'
     volumes:
+      - './certs:/root/.local/share/mkcert'
       - './web:/var/www/html'
+    depends_on:
+      - 'php-fpm'
 
   php-fpm:
     build: '../7.3'
