@@ -38,30 +38,30 @@ When set to 1 enable to remote debug (Xdebug)
 
 ### docker-compose.yml
 
-```
+```yaml
 version: '3'
 
 services:
 
   nginx:
-    build: './nginx'
-    restart: 'on-failure'
+    build: ./nginx
+    restart: on-failure
     ports:
-      - '80:80'
-      - '443:443'
+      - 80:80
+      - 443:443
     volumes:
-      - './certs:/root/.local/share/mkcert'
-      - './web:/var/www/html'
+      - ./certs:/root/.local/share/mkcert
+      - ./web:/var/www/html
     depends_on:
-      - 'php-fpm'
+      - php-fpm
 
   php-fpm:
-    build: 'punimeister/php-fpm:latest'
-    restart: 'on-failure'
+    build: punimeister/php-fpm:latest
+    restart: on-failure
     environment:
-      REMOTE_DEBUG: '0'
+      REMOTE_DEBUG: 0
     volumes:
-      - './web:/var/www/html'
+      - ./web:/var/www/html
 ```
 
 ### Dockerfile
