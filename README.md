@@ -74,7 +74,7 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /usr/local/bin
-RUN wget --no-check-certificate -O mkcert https://github.com/FiloSottile/mkcert/releases/download/v1.3.0/mkcert-v1.3.0-linux-amd64 \
+RUN wget --no-check-certificate -O mkcert https://github.com/FiloSottile/mkcert/releases/download/v1.4.0/mkcert-v1.4.0-linux-amd64 \
  && chmod +x mkcert \
  && mkdir -m 755 /certs
 
